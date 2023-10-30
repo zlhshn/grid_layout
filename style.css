@@ -50,17 +50,38 @@ main {
     background-color:   #977982;
     /* grid-column:1/4 ; */
 }
+
+
 aside{
     grid-area: aside;
     /* grid-column: 4/5;
     grid-row: 2/4 */
     background-color:  #82adad;
-}
+ } 
 
 footer{
     grid-area: footer;
     background-color: #c8dfbe;
+} 
+
+
+
+
+@media screen  and (max-width:600px) {
+
+  
+
+    .container{
+
+        grid-template-columns: auto auto auto 20%;
+        grid-template-rows:repeat(5,auto) ;
+
+        grid-template-areas: 
+    "header header header header"
+    "box box box box"
+    "aside aside aside aside"
+    "main main main main"
+    "footer footer footer footer";
+    }
+    
 }
-
-
-
